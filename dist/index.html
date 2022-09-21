@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzLisE5In117ZIHWKAk8yw4oxeTc_DdCI&libraries=places"></script>
     <script src="main.js" defer></script>
 </head>
 <body>
+
+    <input id="searchTextField" type="text" size="50">
+    <input type="hidden" id="city2" name="city2"/>
+    <input type="hidden" id="cityLat" name="cityLat"/>
+    <input type="hidden" id="cityLng" name="cityLng"/>
+    <button id="searchPlace">Search</button>
 </body>
 </html>
