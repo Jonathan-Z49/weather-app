@@ -9,11 +9,44 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+    <div id="head">
 
-    <input id="searchTextField" type="text" size="50">
-    <input type="hidden" id="city2" name="city2"/>
-    <input type="hidden" id="cityLat" name="cityLat"/>
-    <input type="hidden" id="cityLng" name="cityLng"/>
-    <button id="searchPlace">Search</button>
+        <input id="searchTextField" type="text" size="50">
+
+        <button id="searchPlace">Search</button>
+
+        <div class="unit">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+                <p class="unit__fahrenheit">Fahrenheit (℉)</p>
+                <p class="unit__celsius">Celsius (℃)</ip>
+            <div class='unit__ball'> </div>
+            </label>
+        </div>
+
+    </div>
+
+    <div id="weather-container">
+        <div class="weather__daily">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, reiciendis?
+        </div>
+        <div class="weather__daily--details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, voluptates?
+        </div>
+        <div class="weather__forecast">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quam.
+        </div>
+    </div>
+    
+
+    <footer id="foot">
+        <a href="https://openweathermap.org/api">
+            <img src="../src/openweather-logo.png" alt="openweather logo" id="opw">
+        </a>
+        <a href="https://github.com/Jonathan-Z49">
+            <img src="../src/GitHub-Mark-32px.png" alt="Github logo" id="github">
+        </a>
+    </footer>
+
 </body>
 </html>
