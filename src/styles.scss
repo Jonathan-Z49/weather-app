@@ -20,6 +20,10 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
   }
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 
 body {
     display: flex;
@@ -69,7 +73,7 @@ body {
 
 #foot {
   background-color: #4e4d4a;
-  position: fixed;
+  position: sticky;
   width: 100%;
   height: 55px;
   bottom: 0;
@@ -87,40 +91,21 @@ body {
 }
 
 .unit {
-    .checkbox {
-        opacity: 0;
-        position: absolute;
-      }
-      .label {
-        cursor: pointer;
-        width: 240px;
-        height: 26px;
-        background-color: #111;
-        display: flex;
-        border-radius: 50px;
-        align-items: center;
-        justify-content: space-between;
-        padding: 5px;
-        position: relative;
-        color: white;
-        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
-        .unit__celsius {
-            padding-right: .6rem;
-        }
-      }
-      .unit__ball {
-        width: 125px;
-        height: 23px;
-        background-color: white;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        border-radius: 100vmax;
-        transition: transform 0.2s linear;
-      }
-      .checkbox:checked + .label .unit__ball {
-        transform: translateX(110px);
-      }
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    border-radius: 100vmax;
+    border: none;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    @include hoverFocus();
+    span.active {
+      font-weight: bold;
+    }
 }
 
 #weather-container {
@@ -139,7 +124,7 @@ body {
 
   /* Chrome, Edge, and Safari */
   &::-webkit-scrollbar {
-    width: 16px;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
@@ -149,13 +134,12 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: #000000;
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    border: 1px solid black;
   }
 
   .weather__daily {
     margin: 0;
-    background-color: rgb(241, 241, 241);
-    padding: 1rem;
+    background-color: #9ca3af;
     height: 300px;
     width: 300px;
     border-top-right-radius: 30px;
@@ -163,22 +147,79 @@ body {
     border: none;
     border-left: solid 4px orange;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 125px;
+      max-height: 125px;
+    }
+
+    .location {
+      padding: 0;
+      margin: 0;
+      max-width: 95%;
+      max-height: 60px;
+      font-weight: bold;
+      font-size: 1.35rem;
+    }
+
+    .daily {
+      display: flex;
+      margin-right: auto;
+      gap: 1rem;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .daily-temp {
+      padding: 0;
+      margin: 0;
+      width: 110px;
+      height: 110px;
+      font-size: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
 
   .weather__daily--details {
     height: 300px;
     width: 600px;
-    background-color: rgb(241, 241, 241);
+    background-color: #9ca3af;
     padding: 1rem;
     border: none;
     border-radius: 15px;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    div {
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+      p:nth-child(1) {
+        color: rgb(71, 71, 71);
+        font-weight: bold;
+        font-size: 1rem;
+        opacity: .75;
+      }
+    }
   }
 
   .weather__forecast {
     height: 150px;
     width: 800px;
-    background-color: rgb(241, 241, 241);
+    background-color: #9ca3af;
     padding: 1rem;
     border: none;
     border-radius: 15px;

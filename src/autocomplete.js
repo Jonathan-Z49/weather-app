@@ -14,12 +14,10 @@ export default function initialize() {
     if (!place || input.value === '') {
       input.value = '';
       place = undefined;
-      console.log(place);
     } else {
-      console.log(place);
       const latVal = place.geometry.location.lat();
       const lonVal = place.geometry.location.lng();
-      getWeather(latVal, lonVal);
+      getWeather(latVal, lonVal, place.formatted_address);
     }
   });
 }
