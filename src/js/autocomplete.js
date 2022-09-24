@@ -1,4 +1,4 @@
-import getWeather from './weather';
+import getWeather from './weather.js';
 
 export default function initialize() {
   const searchButton = document.getElementById('searchPlace');
@@ -20,4 +20,5 @@ export default function initialize() {
       getWeather(latVal, lonVal, place.formatted_address);
     }
   });
+  getWeather(51.5072178, -0.1275862, 'London, UK');
 }
