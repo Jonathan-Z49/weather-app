@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzLisE5In117ZIHWKAk8yw4oxeTc_DdCI&libraries=places"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <nav id="head">
+      <input id="searchTextField" type="text" size="50" />
+
+      <button id="searchPlace">Search</button>
+
+      <div class="unit">
+        <p><span class="celsius active">C°</span> / <span class="fahrenheit">F°</span></p>
+      </div>
+    </nav>
+
+    <section id="weather-container">
+      <div class="weather__daily">
+        <div class="location"></div>
+        <div class="daily"></div>
+        <p class="description"></p>
+      </div>
+      <div class="weather__daily--details"></div>
+      <div class="weather__forecast">
+        
+      </div>
+    </section>
+
+    <footer id="foot">
+      <a href="https://openweathermap.org/api">
+        <img
+          src="../src/openweather-logo.png"
+          alt="openweather logo"
+          id="opw"
+        />
+      </a>
+      <a href="https://github.com/Jonathan-Z49">
+        <img src="../src/GitHub-Mark-32px.png" alt="Github logo" id="github" />
+      </a>
+    </footer>
+  </body>
+</html>
