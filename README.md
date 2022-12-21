@@ -1,5 +1,6 @@
 # Weather App
-Weather app that lets you know the current and weekly weather of any location.
+Weather app that lets you know the current and weekly weather of any location.  
+Built with Javascript(ES6+), HTML, SCSS, Webpack. 
 
 ## Features:
 - Search bar for finding a location. Powered through the use of Google Maps Javascript API.
